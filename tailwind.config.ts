@@ -25,7 +25,7 @@ const config = {
           100: "#d9e2e8",
         },
         fontPrimary: {
-          800: "#192024 !important",
+          DEFAULT: "#192024 !important",
           700: "#212a30",
           100: "#ffffff",
         },

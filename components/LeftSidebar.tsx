@@ -23,7 +23,7 @@ const LeftSidebar = () => {
             <div key={link.id} className="">
               <Link
                 href={link.route}
-                className={`flex h-10 items-center space-x-3 rounded-sm px-2 hover:bg-gray ${isActive ? "bg-gray font-semibold" : ""} text-normal mb-1 text-fontPrimary-100`}
+                className={`flex h-10 items-center space-x-3 rounded-sm px-2 hover:bg-gray ${isActive ? "bg-gray font-semibold" : ""} text-normal mb-1 text-fontPrimary`}
               >
                 {isOpen ? (
                   <>
