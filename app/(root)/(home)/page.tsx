@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
 
-const page = () => {
+import TestForm from "@/components/TestForm";
+
+// import TestFormTwo from "@/components/TestFormTwo";
+
+const Page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Home Page</h1>
+    <main className="flex min-h-screen max-w-full grow  flex-col p-10">
+      <TestForm />
     </main>
   );
 };
 
-export default page;
+export default Page;
