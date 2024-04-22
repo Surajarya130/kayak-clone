@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { CalendarIcon } from "@radix-ui/react-icons";
@@ -16,6 +16,8 @@ import Image from "next/image";
 import { FormSchema } from "@/types";
 
 const FlightSearchForm = () => {
+  const [date, setDate] = useState("");
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -34,6 +36,14 @@ const FlightSearchForm = () => {
   };
 
   const travelType = form.watch("journeyType");
+
+  const useDateEffect = (startDateValue: Date, setDate: (date: string) => void) => {
+    useEffect(() => {
+      setDate(format(startDateValue, "PPP"));
+    }, [startDateValue, setDate]);
+  };
+
+  useDateEffect(form.getValues("startDate"), setDate);
 
   return (
     <Form {...form}>
@@ -236,7 +246,7 @@ const FlightSearchForm = () => {
                           !field.value && "text-muted-foreground"
                         )}
                       >
-                        {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                        {field.value ? date : <span>Pick a date</span>}
                         <CalendarIcon className="ml-auto size-4 opacity-50" />
                       </Button>
                     </FormControl>
