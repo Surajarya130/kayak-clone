@@ -4,7 +4,7 @@ import * as z from "zod";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+import { cn, handleRev, handleSeatCounter } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "./ui/button";
 
@@ -15,8 +15,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import Image from "next/image";
 import { FormSchema } from "@/types";
 
-const TestForm = () => {
-  const form = useForm<z.z.infer<typeof FormSchema>>({
+const FlightSearchForm = () => {
+  const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       journeyType: "one-way",
@@ -33,32 +33,7 @@ const TestForm = () => {
     console.log(data, "hey suraj");
   };
 
-  const handleSeatCounter = (typeOfBtn: string) => {
-    const currentValue = form.getValues("noOfPassengers");
-    let newValue = currentValue;
-
-    if (typeOfBtn === "add") {
-      newValue = (currentValue ?? 0) + 1;
-    } else if (typeOfBtn === "minus") {
-      newValue = (currentValue ?? 2) - 1;
-    }
-
-    if (newValue && newValue >= 1 && newValue <= 10) {
-      form.setValue("noOfPassengers", newValue);
-    }
-  };
-
   const travelType = form.watch("journeyType");
-
-  const handleRev = () => {
-    console.log("clicked");
-
-    const currentDestination = form.getValues("destination");
-    const currentFrom = form.getValues("from");
-
-    form.setValue("destination", currentFrom);
-    form.setValue("from", currentDestination);
-  };
 
   return (
     <Form {...form}>
@@ -127,7 +102,7 @@ const TestForm = () => {
                         disabled:bg-gray-100
                         "
                           disabled={form.getValues("noOfPassengers") === 10}
-                          onClick={() => handleSeatCounter("add")}
+                          onClick={() => handleSeatCounter(form, "add")}
                         >
                           +
                         </button>
@@ -135,7 +110,7 @@ const TestForm = () => {
                         <button
                           disabled={form.getValues("noOfPassengers") === 1}
                           className="flex size-5 items-center justify-center rounded-lg border disabled:bg-gray-100"
-                          onClick={() => handleSeatCounter("minus")}
+                          onClick={() => handleSeatCounter(form, "minus")}
                         >
                           -
                         </button>
@@ -213,16 +188,10 @@ const TestForm = () => {
 
           <button
             type="button"
-            onClick={handleRev}
+            onClick={() => handleRev(form)}
             className="h-[50px] rounded-md  bg-white-100 px-2 hover:bg-gray-100"
           >
-            <Image
-              src="/assets/icons/revArr.svg"
-              alt="rev-arr"
-              width={48}
-              height={48}
-              // style={{ height: "48px", width: "48px !important" }}
-            />
+            <Image src="/assets/icons/revArr.svg" alt="rev-arr" width={48} height={48} />
           </button>
 
           <FormField
@@ -362,4 +331,4 @@ const TestForm = () => {
   );
 };
 
-export default TestForm;
+export default FlightSearchForm;
