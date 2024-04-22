@@ -1,13 +1,13 @@
 "use client";
 
-import TestForm from "@/components/TestForm";
+import FlightSearchForm from "@/components/FlightSearchForm";
 
 // import TestFormTwo from "@/components/TestFormTwo";
 
 const Page = () => {
   return (
     <main className="flex min-h-screen max-w-full grow  flex-col p-10">
-      <TestForm />
+      <FlightSearchForm />
     </main>
   );
 };
