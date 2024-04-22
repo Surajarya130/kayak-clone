@@ -79,4 +79,55 @@
   .text-normal {
     @apply text-[14px];
   }
+
+  .mainHeading {
+    @apply text-[32px] text-primry-700 leading-[40px] font-semibold;
+  }
+
+  .mainSubHeading {
+    @apply text-[24px] text-primry-700 leading-[40px] font-semibold;
+  }
+
+  .bodyMd {
+    @apply text-[16px] text-fontPrimary-800 leading-[16px] font-normal;
+  }
+
+  .bodySm {
+    @apply text-[14px] text-fontPrimary-800 leading-[16px] font-normal;
+  }
+
+  .bodyXsm {
+    @apply text-[12px] text-fontPrimary-800 leading-[16px] font-normal;
+  }
+
+  .bodyHeading {
+    @apply text-[20px] text-fontPrimary-800 leading-[24px] font-semibold;
+  }
+
+  .bodySubHeading {
+    @apply text-[16px] text-fontPrimary-800 leading-[20px] font-semibold;
+  }
+
+  .footerSmBold {
+    @apply text-[14px] text-#ffffff leading-[16px] font-semibold;
+  }
+
+  .footerXsm {
+    @apply text-[12px] text-#ffffff leading-[16px] font-normal;
+  }
+  .childOfSelectContent > :nth-child(2) {
+    @apply p-0;
+  }
 }
+
+/*
+- mainHeading: 32px, #212a30, leadng-40px, 700
+- mainSubHeading: 24px, #212a30, leadng-40px, 600
+- bodyMd: 16px #192024, leading-16px, 400
+- bodySm: 14px #192024, leading-16px, 400
+- bodyXsm: 12px #192024, leading-16px, 400
+-bodyHeading:  20px, #192024, leadng-24px, 600
+-bodySubHeading: 16px, #192024, leadng-20px, 600
+- footerSmBold: 14px #ffffff, leading-16px, 600
+- footerXsm: 12px #ffffff, leading-16px, 400 
+*/

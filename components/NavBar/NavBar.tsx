@@ -5,7 +5,6 @@ import React from "react"; // useState
 import { Toggle } from "../ui/toggle";
 import { Button } from "../ui/button";
 import { useSidebar } from "@/context/SidebarContext";
-// import { handleHamClickState } from "@/lib/tools";
 
 const NavBar = () => {
   const { isOpen, setIsOpen } = useSidebar();

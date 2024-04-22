@@ -22,11 +22,21 @@ const config = {
       colors: {
         gray: {
           DEFAULT: "#E6EBEF",
+          100: "#d9e2e8",
         },
-        primry: {
-          100: "#192024",
+        fontPrimary: {
+          800: "#192024 !important",
+          700: "#212a30",
+          100: "#ffffff",
         },
-
+        white: {
+          100: "#f0f3f5",
+          DEFAULT: "#ffffff",
+        },
+        orange: {
+          primary: "#ff690f",
+          secondary: "#e8381b",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
