@@ -8,6 +8,15 @@ export interface LinkType {
   hrLine?: boolean;
 }
 
+export interface TravelCardTypee {
+  name: string;
+  id: number;
+  src: string;
+  cardType?: string;
+  badge?: string;
+  pricing: number;
+}
+
 export const FormSchema = z
   .object({
     journeyType: z.enum(["one-way", "return", "multi-city"]),

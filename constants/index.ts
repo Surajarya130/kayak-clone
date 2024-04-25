@@ -1,4 +1,4 @@
-import { LinkType } from "@/types";
+import { LinkType, TravelCardTypee } from "@/types";
 
 export const links: LinkType[] = [
   {
@@ -84,5 +84,64 @@ export const links: LinkType[] = [
     label: "Indian Rupee",
     id: 13,
     route: "currency",
+  },
+];
+
+export const cardDatas: TravelCardTypee[] = [
+  {
+    name: "Delhi",
+    id: 1,
+    src: "/assets/images/img1.jpg",
+    badge: "direct",
+    pricing: 12932,
+  },
+  {
+    name: "Lucknow",
+    id: 2,
+    src: "/assets/images/img2.jpg",
+    badge: "direct",
+    pricing: 23095,
+  },
+  {
+    name: "Mumbai",
+    id: 3,
+    src: "/assets/images/img3.jpg",
+    badge: "direct",
+    pricing: 45876,
+  },
+  {
+    name: "Bangalore",
+    id: 4,
+    src: "/assets/images/img4.jpg",
+    badge: "direct",
+    pricing: 57321,
+  },
+  {
+    name: "Goa",
+    id: 5,
+    src: "/assets/images/img5.jpg",
+    badge: "direct",
+    pricing: 87123,
+  },
+  {
+    name: "Varanasi",
+    id: 6,
+    src: "/assets/images/img6.jpg",
+    badge: "direct",
+    pricing: 41234,
+  },
+  {
+    name: "Chennai",
+    id: 7,
+    src: "/assets/images/img7.jpg",
+    badge: "direct",
+    pricing: 98123,
+  },
+  {
+    name: "Hyderabad",
+    id: 8,
+    src: "/assets/images/img8.jpg",
+    badge: "direct",
+    pricing: 54321,
   },
 ];

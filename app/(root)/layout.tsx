@@ -1,4 +1,5 @@
 import LeftSidebar from "@/components/LeftSidebar";
+import { Toaster } from "@/components/ui/toaster";
 import React from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -6,6 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <main className="flex">
       <LeftSidebar />
       {children}
+      <Toaster />
     </main>
   );
 };
