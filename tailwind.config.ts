@@ -23,6 +23,7 @@ const config = {
         gray: {
           DEFAULT: "#E6EBEF",
           100: "#d9e2e8",
+          200: "#9ba8b0",
         },
         fontPrimary: {
           DEFAULT: "#192024 !important",

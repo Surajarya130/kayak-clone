@@ -85,31 +85,31 @@
   }
 
   .mainSubHeading {
-    @apply text-[24px] text-primry-700 leading-[40px] font-semibold;
+    @apply text-[24px] text-fontPrimary-700 leading-[40px] font-semibold;
   }
 
   .bodyMd {
-    @apply text-[16px] text-fontPrimary-800 leading-[16px] font-normal;
+    @apply text-[16px] text-fontPrimary leading-[16px] font-normal;
   }
 
   .bodySm {
-    @apply text-[14px] text-fontPrimary-800 leading-[16px] font-normal;
+    @apply text-[14px] text-fontPrimary leading-[16px] font-normal;
   }
 
   .bodyXsm {
-    @apply text-[12px] text-fontPrimary-800 leading-[16px] font-normal;
+    @apply text-[12px] text-fontPrimary leading-[16px] font-semibold;
   }
 
   .bodyHeading {
-    @apply text-[20px] text-fontPrimary-800 leading-[24px] font-semibold;
+    @apply text-[20px] text-fontPrimary leading-[24px] font-semibold;
   }
 
   .bodySubHeading {
-    @apply text-[16px] text-fontPrimary-800 leading-[20px] font-semibold;
+    @apply text-[16px] text-fontPrimary leading-[20px] font-semibold;
   }
 
   .footerSmBold {
-    @apply text-[14px] text-#ffffff leading-[16px] font-semibold;
+    @apply text-[14px] text-white leading-[16px] font-semibold;
   }
 
   .footerXsm {
@@ -120,14 +120,20 @@
   }
 }
 
-/*
-- mainHeading: 32px, #212a30, leadng-40px, 700
-- mainSubHeading: 24px, #212a30, leadng-40px, 600
-- bodyMd: 16px #192024, leading-16px, 400
-- bodySm: 14px #192024, leading-16px, 400
-- bodyXsm: 12px #192024, leading-16px, 400
--bodyHeading:  20px, #192024, leadng-24px, 600
--bodySubHeading: 16px, #192024, leadng-20px, 600
-- footerSmBold: 14px #ffffff, leading-16px, 600
-- footerXsm: 12px #ffffff, leading-16px, 400 
-*/
+#id1 > button {
+  border-radius: 5px;
+  width: 44px;
+  height: 44px;
+}
+
+#id1 > button:disabled {
+  display: none;
+}
+
+#id1 > button:nth-of-type(2) {
+  right: -1.5rem;
+}
+
+#id1 > button:nth-of-type(1) {
+  left: -1.5rem;
+}
